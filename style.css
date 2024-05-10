@@ -1,0 +1,73 @@
+html {
+    cursor: url("imagens/taco-bom-beleza.png") 30 30 , auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+body {
+    background-image: url(imagens/bg.jpg); 
+    background-repeat: no-repeat; 
+    background-size: 100vw 100vh;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Define a altura da área de visualização do dispositivo */
+    animation: .5s linear 1s infinite alternate slidein;
+  } 
+  
+  .container img {
+    /* Estilos opcionais para a imagem */
+    max-width: 450px;
+    max-height: 450px;
+    animation: pular 2s ease-in-out infinite;
+  }
+
+  .container p {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 50px ;
+    color: rgb(204, 39, 67);
+    opacity: 1  ;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid ;
+    animation: pular 2s ease-in-out infinite;
+ }
+
+  @keyframes pular {
+    0% {
+     
+      transform: translatey(0px);
+    }
+  
+    50% {
+     
+      transform: translatey(-10px);
+    }
+  
+    100% {
+
+      transform: translatey(0px);
+    }
+  }
+
+  #botao {
+    margin-top: -180px;
+    position: absolute;
+  }
+
+  .select {
+    margin-top: -240px;
+    position: absolute;
+    width: 210px;
+    color:  rgb(204, 39, 67);
+    border-radius: 50px;
+  }

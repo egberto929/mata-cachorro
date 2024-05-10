@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Mata Cachorro</title>
+
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="jogo.js"></script>
+  </head>
+
+  <body onresize="ajustaTamanhoPalcoJogo()">
+    <div class="painel">
+      <div class="vidas">
+        <img id="v1" src="imagens/coracao_cheio.png" alt="" />
+        <img id="v2" src="imagens/coracao_cheio.png" alt="" />
+        <img id="v3" src="imagens/coracao_cheio.png" alt="" />
+      </div>
+
+      <div class="cronometro">
+        Tempo Restante:
+        <span id="cronometro"></span>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("cronometro").innerHTML = tempo;
+
+      var criaCachorro = setInterval(function () {
+        posicaoRandomica();
+      }, criaCachorroTempo);
+    </script>
+  </body>
+</html>
