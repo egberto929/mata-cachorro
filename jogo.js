@@ -78,7 +78,8 @@ cachorro.style.top = posicaoY + 'px'
 cachorro.style.position = 'absolute'
 cachorro.id = 'cachorro'
 cachorro.onclick = function() {
-    this.remove()
+    reproduzirSom();
+    this.remove();
 }
 
 document.body.appendChild(cachorro)
@@ -111,3 +112,13 @@ function ladoAleatorio(){
             return 'ladoB'
     }
 }
+
+var som = new Audio('som-cachorro.mp3');
+
+function reproduzirSom() {
+
+    som.play(); 
+    som.currentTime = 0;
+
+}
+
